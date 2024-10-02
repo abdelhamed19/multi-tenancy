@@ -38,6 +38,9 @@ class TenantService
     }
     public function switchToDefault()
     {
+        DB::purge('system');
+        DB::purge('tenant');
+        DB::reconnect('system');
         DB::setDefaultConnection('system');
     }
 }

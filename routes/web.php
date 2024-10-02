@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Config;
 */
 
 Route::get('/', function (Request $request) {
-    dd(DB::table('users')->get());
+   dd(DB::table('users')->get());
+   //dd(DB::connection());
     return view('welcome');
 });

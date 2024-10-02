@@ -1,9 +1,11 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -19,16 +21,6 @@ return new class extends Migration
             $table->string('database');
             $table->timestamps();
         });
-        DB::table('tenants')->insert([
-            'name'=> 'Tenant 1',
-            'domain'=> 'multi-tenancy1.local',
-            'database'=> 'tenant1',
-        ]);
-        DB::table('tenants')->insert([
-            'name'=> 'Tenant 2',
-            'domain'=> 'multi-tenancy2.local',
-            'database'=> 'tenant2',
-        ]);
     }
 
     /**

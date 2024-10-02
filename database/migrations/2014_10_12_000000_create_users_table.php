@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -20,6 +20,42 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        // User::create([
+        //     'name' => 'John Doe',
+        //     'email' => 'john@example.com',
+        //     'password' => Hash::make('password123'),
+        // ]);
+
+        // User::create([
+        //     'name' => 'Jane Smith',
+        //     'email' => 'jane@example.com',
+        //     'password' => Hash::make('password123'),
+        // ]);
+
+        // User::create([
+        //     'name' => 'Alice Johnson',
+        //     'email' => 'alice@example.com',
+        //     'password' => Hash::make('password123'),
+        // ]);
+
+        // User::create([
+        //     'name' => 'Bob Williams',
+        //     'email' => 'bob@example.com',
+        //     'password' => Hash::make('password123'),
+        // ]);
+
+        // User::create([
+        //     'name' => 'Charlie Brown',
+        //     'email' => 'charlie@example.com',
+        //     'password' => Hash::make('password123'),
+        // ]);
+
+        // User::create([
+        //     'name' => 'Emily Davis',
+        //     'email' => 'emily@example.com',
+        //     'password' => Hash::make('password123'),
+        // ]);
     }
 
     /**
